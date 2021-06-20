@@ -55,8 +55,8 @@ public class ApplicationConfig {
 
         try {
             getSecretValueResult = client.getSecretValue(getSecretValueRequest);
-        } catch (Exception e) {
-            throw e;
+        } catch (Exception exception) {
+            throw exception;
         }
         if (getSecretValueResult.getSecretString() != null) {
             secret = getSecretValueResult.getSecretString();
